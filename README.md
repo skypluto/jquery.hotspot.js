@@ -17,7 +17,7 @@ bindselector: 'hover'
 ```
 
 * Sample HTML
-** Defining the x and y position
+** Defining the x and y position which is the absolute position of the image in full size.
 ```html
 <div id="hotspotImg" class="responsive-hotspot-wrap row">
   <img class="img-responsive" src="img/banners/main.png">
