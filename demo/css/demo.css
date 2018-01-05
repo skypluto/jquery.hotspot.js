@@ -1,0 +1,114 @@
+/* Animation */
+@-webkit-keyframes pulsate {
+	0% {
+		-webkit-transform: scale(1);
+						transform: scale(1);
+		opacity: 0.8;
+	}
+	45% {
+		-webkit-transform: scale(1.75);
+						transform: scale(1.75);
+		opacity: 0;
+	}
+}
+@keyframes pulsate {
+	0% {
+		-webkit-transform: scale(1);
+						transform: scale(1);
+		opacity: 0.8;
+	}
+	45% {
+		-webkit-transform: scale(1.75);
+						transform: scale(1.75);
+		opacity: 0;
+	}
+}
+
+body {
+	margin: 0;
+}
+
+
+/* Hotspot */
+#hotspotImg {
+	background-color: #ededed;
+	background-size: cover;
+	background-position: center center;
+	position: relative;
+}
+#hotspotImg .img-responsive {
+	max-width: 100%;
+}
+
+#hotspotImg .hot-spot {
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	top: 5px;
+	left: 5px;
+	text-align: center;
+	background-color: rgba(229, 0, 137, 0.6);
+	color: #fff;
+	border-radius: 100%;
+	cursor: pointer;
+	transition: all .3s ease;
+}
+
+
+#hotspotImg .hot-spot .circle {
+	display: block;
+	position: absolute;
+	top: 45%;
+	left: 45%;
+	width: 2em;
+	height: 2em;
+	margin: -1em auto auto -1em;
+	-webkit-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
+	border-radius: 50%;
+	border: 1px solid #E5008A;
+	opacity: 0;
+	-webkit-animation: pulsate 3s ease-out infinite;
+	animation: pulsate 3s ease-out infinite;
+}
+
+#hotspotImg .hot-spot .tooltip {
+	background-color: rgba(58, 95, 150, 0.7);
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	color: #fff;
+	display: none;
+	font-size: 14px;
+	opacity: 1.0;
+	left: 0px;
+	padding: 15px 5px;
+	position: absolute;
+	text-align: left;
+	top: 30px;
+	width: 280px;
+	z-index: 999;
+}
+
+#hotspotImg .hot-spot .tooltip .img-row {
+	padding: 10px;
+	text-align: center;
+}
+
+#hotspotImg .hot-spot .tooltip .text-row {
+	padding: 15px;
+}
+
+#hotspotImg .hot-spot .tooltip h4 {
+	margin-bottom: 10px;
+	border-bottom: 1px solid #ffffff;
+}
+
+#hotspotImg .hot-spot .tooltip p {
+	font-size: 14px;
+	line-height: 1.4em;
+	margin-bottom: 10px;
+}
+#hotspotImg .hot-spot .tooltip p:last-child {
+	margin-bottom: 0;
+}
